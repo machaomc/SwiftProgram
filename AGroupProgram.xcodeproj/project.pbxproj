@@ -21,6 +21,9 @@
 		046D21D81D127BE3003D5309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046D21D71D127BE3003D5309 /* Assets.xcassets */; };
 		046D21E61D127BE3003D5309 /* AGroupProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D21E51D127BE3003D5309 /* AGroupProgramTests.swift */; };
 		046D21F11D127BE4003D5309 /* AGroupProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D21F01D127BE4003D5309 /* AGroupProgramUITests.swift */; };
+		047A71A51D334D0400E1F2BA /* ViewController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A71A41D334D0400E1F2BA /* ViewController+TitleView.swift */; };
+		047A71A81D336FE000E1F2BA /* QBTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A71A71D336FE000E1F2BA /* QBTitleView.swift */; };
+		047A71AA1D3397CF00E1F2BA /* Prefix-Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */; };
 		0488B6481D2DF95200CF2797 /* MCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */; };
 		0488B64E1D2E293400CF2797 /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */; };
 		0488B6501D2E296700CF2797 /* MCBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */; };
@@ -69,6 +72,9 @@
 		046D21EC1D127BE4003D5309 /* AGroupProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGroupProgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		046D21F01D127BE4003D5309 /* AGroupProgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGroupProgramUITests.swift; sourceTree = "<group>"; };
 		046D21F21D127BE4003D5309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047A71A41D334D0400E1F2BA /* ViewController+TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TitleView.swift"; sourceTree = "<group>"; };
+		047A71A71D336FE000E1F2BA /* QBTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QBTitleView.swift; sourceTree = "<group>"; };
+		047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prefix-Program.swift"; sourceTree = "<group>"; };
 		0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseNavigationController.swift; sourceTree = "<group>"; };
 		0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				0488B6461D2DF77100CF2797 /* StoryBoard */,
 				0442BD591D2BBFC400F01F62 /* Base */,
 				046D21D01D127BE3003D5309 /* AppDelegate.swift */,
+				047A71A21D334C7200E1F2BA /* Common */,
 				046D21D71D127BE3003D5309 /* Assets.xcassets */,
 				046318831D1A287B0058B434 /* Launch Screen.storyboard */,
 				046D21DC1D127BE3003D5309 /* Info.plist */,
@@ -174,6 +181,32 @@
 				046D21F21D127BE4003D5309 /* Info.plist */,
 			);
 			path = AGroupProgramUITests;
+			sourceTree = "<group>";
+		};
+		047A71A21D334C7200E1F2BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */,
+				047A71A61D336FB000E1F2BA /* Views */,
+				047A71A31D334CAF00E1F2BA /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		047A71A31D334CAF00E1F2BA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				047A71A41D334D0400E1F2BA /* ViewController+TitleView.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		047A71A61D336FB000E1F2BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047A71A71D336FE000E1F2BA /* QBTitleView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		0488B6461D2DF77100CF2797 /* StoryBoard */ = {
@@ -422,9 +455,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047A71A51D334D0400E1F2BA /* ViewController+TitleView.swift in Sources */,
 				0488B6481D2DF95200CF2797 /* MCBaseNavigationController.swift in Sources */,
 				046D21D31D127BE3003D5309 /* ViewController.swift in Sources */,
 				0488B6521D2E29E800CF2797 /* MCItem1ViewController.swift in Sources */,
+				047A71AA1D3397CF00E1F2BA /* Prefix-Program.swift in Sources */,
 				0463188A1D1A41EA0058B434 /* baseNavigationController.swift in Sources */,
 				0442BD5B1D2BC05300F01F62 /* MCBaseTabBarController.swift in Sources */,
 				046318901D1A8AB50058B434 /* navigationItem2Controller.swift in Sources */,
@@ -437,6 +472,7 @@
 				0488B6541D2E2A8100CF2797 /* MCItem2ViewController.swift in Sources */,
 				046318921D1AA2690058B434 /* ViewControllerItem1.swift in Sources */,
 				0488B6501D2E296700CF2797 /* MCBaseTableViewController.swift in Sources */,
+				047A71A81D336FE000E1F2BA /* QBTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,39 +22,44 @@ class MCBaseTabBarController: UITabBarController {
         
         var arrayController : [MCBaseNavigationController] = []
         var titleStr : NSString = ""
-        var imgageName : NSString
-        var selectedImageName:NSString
+        var imgageName : NSString = ""
+        var selectedImageName:NSString = ""
         
         for controller in arr {
             let index:Int = arr.indexOf(controller)!
             switch (index) {
             case 0:
-                titleStr = "首页"
-                imgageName = ""
-                selectedImageName = ""
+                titleStr = "新闻"
+                imgageName = "tabbar_icon_news_normal"
+                selectedImageName = "tabbar_icon_news_highlight"
                 break
             case 1:
-                titleStr = "消息"
-                imgageName = ""
-                selectedImageName = ""
+                titleStr = "阅读"
+                imgageName = "tabbar_icon_reader_normal"
+                selectedImageName = "tabbar_icon_reader_highlight"
                 break
             case 2:
-                titleStr = "动态"
-                imgageName = ""
-                selectedImageName = ""
+                titleStr = "视听"
+                imgageName = "tabbar_icon_media_normal"
+                selectedImageName = "tabbar_icon_media_highlight"
                 break
             case 3:
                 titleStr = "我的"
-                imgageName = ""
-                selectedImageName = ""
+                imgageName = "tabbar_icon_me_normal"
+                selectedImageName = "tabbar_icon_me_highlight"
                 break
             default:
                 break
             }
             
             let nav:MCBaseNavigationController = MCBaseNavigationController.init(rootViewController: controller)
-            nav.tabBarItem = UITabBarItem.init(title: titleStr as String, image: nil, selectedImage: nil)
+            nav.tabBarItem = UITabBarItem.init(title: titleStr as String, image: UIImage.init(named: imgageName as String), selectedImage: UIImage.init(named: selectedImageName as String))
+            
+            nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.grayColor()], forState: UIControlState.Normal)
+            nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.redColor()], forState: UIControlState.Selected)
             arrayController.append(nav)
+            
+            
         }
         
         return arrayController

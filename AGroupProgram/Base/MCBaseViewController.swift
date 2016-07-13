@@ -9,9 +9,13 @@
 import UIKit
 
 class MCBaseViewController: UIViewController {
-
+    
+    var vcTitle:NSString?
+    var titleView:QBTitleView = QBTitleView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitleView()
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
@@ -33,3 +37,4 @@ class MCBaseViewController: UIViewController {
     */
 
 }
+

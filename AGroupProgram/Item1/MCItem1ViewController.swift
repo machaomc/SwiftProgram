@@ -10,11 +10,12 @@ import UIKit
 
 class MCItem1ViewController: MCBaseTableViewController {
 
+    
     override func viewDidLoad() {
+        self.vcTitle = "新闻"
         super.viewDidLoad()
-        self.title = "首页"
-        
         // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
