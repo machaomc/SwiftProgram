@@ -75,6 +75,7 @@
 		047A71A41D334D0400E1F2BA /* ViewController+TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TitleView.swift"; sourceTree = "<group>"; };
 		047A71A71D336FE000E1F2BA /* QBTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QBTitleView.swift; sourceTree = "<group>"; };
 		047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prefix-Program.swift"; sourceTree = "<group>"; };
+		047A71B41D3631FB00E1F2BA /* AGroupProgram-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGroupProgram-Bridging-Header.h"; sourceTree = "<group>"; };
 		0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseNavigationController.swift; sourceTree = "<group>"; };
 		0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 		047A71A21D334C7200E1F2BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				047A71B41D3631FB00E1F2BA /* AGroupProgram-Bridging-Header.h */,
 				047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */,
 				047A71A61D336FB000E1F2BA /* Views */,
 				047A71A31D334CAF00E1F2BA /* Extension */,
@@ -608,10 +610,14 @@
 			baseConfigurationReference = 3B7FC55543477A1293E9FEDE /* Pods-AGroupProgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = AGroupProgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcproject.www.AGroupProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AGroupProgram/Common/AGroupProgram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -620,10 +626,13 @@
 			baseConfigurationReference = 9B1B7F6D1D3D73253A36E29A /* Pods-AGroupProgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = AGroupProgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcproject.www.AGroupProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AGroupProgram/Common/AGroupProgram-Bridging-Header.h";
 			};
 			name = Release;
 		};

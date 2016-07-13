@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//定义一些全局变量和全局方法  相当于宏
 let APPScreenFrame:CGRect = UIScreen().bounds
 let APPScreenWidth:CGFloat = APPScreenFrame.size.width
 

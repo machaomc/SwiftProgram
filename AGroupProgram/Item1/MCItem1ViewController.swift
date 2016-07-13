@@ -14,6 +14,7 @@ class MCItem1ViewController: MCBaseTableViewController {
     override func viewDidLoad() {
         self.vcTitle = "新闻"
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
 
     }
