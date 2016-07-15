@@ -14,6 +14,7 @@ class MCBaseNavigationController: UINavigationController {
         super.viewDidLoad()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
                                                             NSFontAttributeName: UIFont(name: "Heiti SC", size: 18.0)!]
+        self.navigationBar.translucent = false
         // Do any additional setup after loading the view.
     }
 

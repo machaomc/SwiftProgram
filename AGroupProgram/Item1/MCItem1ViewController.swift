@@ -11,13 +11,98 @@ import UIKit
 class MCItem1ViewController: MCBaseTableViewController {
 
     
+    var readNewsArray: [Model_TouTiao] = [] {
+        didSet {
+            self.tableView!.reloadData()
+        }
+    }
+
+    
     override func viewDidLoad() {
-        self.vcTitle = "新闻"
+        self.vcTitle = "今日头条"
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
 
+        //集成上拉与下拉刷新
+        self.tableView!.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(MCItem1ViewController.requestInfo))
+        //self.tableView!.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(MCItem1ViewController.requestMoreInfo))
+        
+        self.tableView!.mj_header.beginRefreshing()
     }
+    
+    /**
+     下拉刷新回调方法
+     */
+    func requestInfo() {
+        DataTool.loadReadNewsData { response -> Void in
+            self.readNewsArray.removeAll()
+            self.tableView!.mj_header.endRefreshing()
+            guard let modelArray = response else {
+                return
+            }
+            self.readNewsArray = modelArray +  self.readNewsArray
+        }
+    }
+    /**
+     上拉刷新回调方法
+     */
+    func requestMoreInfo() {
+        // 其实上拉加载数据的请求有点不同，这里偷懒就不区分了^_^
+        DataTool.loadReadNewsData { response -> Void in
+            self.tableView!.mj_footer.endRefreshing()
+            guard let modelArray = response else {
+                return
+            }
+            self.readNewsArray += modelArray
+        }
+    }
+    
+    
+    //UITableViewDelegate
+    override func setTableViewStyle() ->UITableViewStyle{
+        return .Plain
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.readNewsArray.count
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return NewsForTouTiaoCell.getCellHeight()
+    }
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let initIdentifier = "NewsForTouTiaoCell"
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(initIdentifier) as? NewsForTouTiaoCell
+        if cell == nil {
+            cell = NewsForTouTiaoCell(style: UITableViewCellStyle.Default ,reuseIdentifier:initIdentifier)
+            cell!.selectionStyle = UITableViewCellSelectionStyle.None
+        }
+        
+        cell?.setDataWithModel(self.readNewsArray[indexPath.row])
+    
+        return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        print(indexPath)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

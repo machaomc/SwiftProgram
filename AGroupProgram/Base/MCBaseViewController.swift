@@ -12,11 +12,16 @@ class MCBaseViewController: UIViewController {
     
     var vcTitle:NSString?
     var titleView:QBTitleView = QBTitleView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setTitleView()
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        let isHiddenTabBar:Bool = (self.navigationController?.tabBarController?.tabBar.hidden)!
+        if isHiddenTabBar == false {
+            self.view?.height = self.view.height - 49 - 64
+        }
+        
         // Do any additional setup after loading the view.
     }
 

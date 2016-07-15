@@ -12,14 +12,13 @@ class MCBaseTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBar.translucent = false
         self.viewControllers = self.tabBarControllers()
         // Do any additional setup after loading the view.
     }
 
     func tabBarControllers() -> [MCBaseNavigationController] {
         let arr:[MCBaseViewController] = [MCItem1ViewController(),MCItem2ViewController(),MCItem3ViewController(),MCItem4ViewController()]
-        
         var arrayController : [MCBaseNavigationController] = []
         var titleStr : NSString = ""
         var imgageName : NSString = ""
@@ -29,7 +28,7 @@ class MCBaseTabBarController: UITabBarController {
             let index:Int = arr.indexOf(controller)!
             switch (index) {
             case 0:
-                titleStr = "新闻"
+                titleStr = "今日头条"
                 imgageName = "tabbar_icon_news_normal"
                 selectedImageName = "tabbar_icon_news_highlight"
                 break

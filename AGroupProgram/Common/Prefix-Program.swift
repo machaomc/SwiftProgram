@@ -8,9 +8,10 @@
 
 import UIKit
 //定义一些全局变量和全局方法  相当于宏
-let APPScreenFrame:CGRect = UIScreen().bounds
+let APPScreenFrame:CGRect = UIScreen.mainScreen().applicationFrame
 let APPScreenWidth:CGFloat = APPScreenFrame.size.width
-
+let APPScreenHeight:CGFloat = APPScreenFrame.size.height
+let APPMainBackGroudColor:UIColor = UIColor.whiteColor()
 class Prefix_Program: NSObject {
 
 }

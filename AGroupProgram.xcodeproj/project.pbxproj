@@ -43,6 +43,11 @@
 		047A71F71D3641B900E1F2BA /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A71E21D3641B900E1F2BA /* UIScrollView+MJExtension.m */; };
 		047A71F81D3641B900E1F2BA /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A71E41D3641B900E1F2BA /* UIScrollView+MJRefresh.m */; };
 		047A71F91D3641B900E1F2BA /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A71E61D3641B900E1F2BA /* UIView+MJExtension.m */; };
+		047A72011D3764AA00E1F2BA /* UIView+BFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A72001D3764AA00E1F2BA /* UIView+BFExtension.m */; };
+		047A72031D37944F00E1F2BA /* MCBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A72021D37944F00E1F2BA /* MCBaseTableViewCell.swift */; };
+		047A72051D3795A800E1F2BA /* NewsForTouTiaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A72041D3795A800E1F2BA /* NewsForTouTiaoCell.swift */; };
+		047A72071D38C2C900E1F2BA /* Model_TouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A72061D38C2C900E1F2BA /* Model_TouTiao.swift */; };
+		047A72091D38D16900E1F2BA /* DataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A72081D38D16900E1F2BA /* DataTool.swift */; };
 		0488B6481D2DF95200CF2797 /* MCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */; };
 		0488B64E1D2E293400CF2797 /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */; };
 		0488B6501D2E296700CF2797 /* MCBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */; };
@@ -133,6 +138,12 @@
 		047A71E41D3641B900E1F2BA /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		047A71E51D3641B900E1F2BA /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		047A71E61D3641B900E1F2BA /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		047A71FF1D3764AA00E1F2BA /* UIView+BFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFExtension.h"; sourceTree = "<group>"; };
+		047A72001D3764AA00E1F2BA /* UIView+BFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFExtension.m"; sourceTree = "<group>"; };
+		047A72021D37944F00E1F2BA /* MCBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseTableViewCell.swift; sourceTree = "<group>"; };
+		047A72041D3795A800E1F2BA /* NewsForTouTiaoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsForTouTiaoCell.swift; sourceTree = "<group>"; };
+		047A72061D38C2C900E1F2BA /* Model_TouTiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_TouTiao.swift; sourceTree = "<group>"; };
+		047A72081D38D16900E1F2BA /* DataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTool.swift; sourceTree = "<group>"; };
 		0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseNavigationController.swift; sourceTree = "<group>"; };
 		0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +189,7 @@
 				0488B6471D2DF95200CF2797 /* MCBaseNavigationController.swift */,
 				0488B64D1D2E293400CF2797 /* MCBaseViewController.swift */,
 				0488B64F1D2E296700CF2797 /* MCBaseTableViewController.swift */,
+				047A72021D37944F00E1F2BA /* MCBaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -249,6 +261,7 @@
 				047A71A91D3397CF00E1F2BA /* Prefix-Program.swift */,
 				047A71A61D336FB000E1F2BA /* Views */,
 				047A71A31D334CAF00E1F2BA /* Extension */,
+				047A72081D38D16900E1F2BA /* DataTool.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -256,6 +269,8 @@
 		047A71A31D334CAF00E1F2BA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				047A71FF1D3764AA00E1F2BA /* UIView+BFExtension.h */,
+				047A72001D3764AA00E1F2BA /* UIView+BFExtension.m */,
 				047A71A41D334D0400E1F2BA /* ViewController+TitleView.swift */,
 			);
 			name = Extension;
@@ -388,6 +403,8 @@
 			isa = PBXGroup;
 			children = (
 				0488B6511D2E29E800CF2797 /* MCItem1ViewController.swift */,
+				047A72041D3795A800E1F2BA /* NewsForTouTiaoCell.swift */,
+				047A72061D38C2C900E1F2BA /* Model_TouTiao.swift */,
 			);
 			path = Item1;
 			sourceTree = "<group>";
@@ -621,6 +638,7 @@
 				047A71F41D3641B900E1F2BA /* MJRefreshStateHeader.m in Sources */,
 				047A71F01D3641B900E1F2BA /* MJRefreshBackNormalFooter.m in Sources */,
 				047A71EA1D3641B900E1F2BA /* MJRefreshFooter.m in Sources */,
+				047A72031D37944F00E1F2BA /* MCBaseTableViewCell.swift in Sources */,
 				0488B6481D2DF95200CF2797 /* MCBaseNavigationController.swift in Sources */,
 				047A71F11D3641B900E1F2BA /* MJRefreshBackStateFooter.m in Sources */,
 				046D21D31D127BE3003D5309 /* ViewController.swift in Sources */,
@@ -630,14 +648,18 @@
 				0463188A1D1A41EA0058B434 /* baseNavigationController.swift in Sources */,
 				047A71EC1D3641B900E1F2BA /* MJRefreshAutoGifFooter.m in Sources */,
 				047A71EE1D3641B900E1F2BA /* MJRefreshAutoStateFooter.m in Sources */,
+				047A72011D3764AA00E1F2BA /* UIView+BFExtension.m in Sources */,
 				0442BD5B1D2BC05300F01F62 /* MCBaseTabBarController.swift in Sources */,
 				046318901D1A8AB50058B434 /* navigationItem2Controller.swift in Sources */,
 				047A71E71D3641B900E1F2BA /* MJRefreshAutoFooter.m in Sources */,
 				0463188E1D1A8A930058B434 /* navigationItem1Controller.swift in Sources */,
+				047A72071D38C2C900E1F2BA /* Model_TouTiao.swift in Sources */,
+				047A72091D38D16900E1F2BA /* DataTool.swift in Sources */,
 				047A71EF1D3641B900E1F2BA /* MJRefreshBackGifFooter.m in Sources */,
 				047A71F81D3641B900E1F2BA /* UIScrollView+MJRefresh.m in Sources */,
 				047A71EB1D3641B900E1F2BA /* MJRefreshHeader.m in Sources */,
 				0488B6561D2E2ABC00CF2797 /* MCItem3ViewController.swift in Sources */,
+				047A72051D3795A800E1F2BA /* NewsForTouTiaoCell.swift in Sources */,
 				047A71F71D3641B900E1F2BA /* UIScrollView+MJExtension.m in Sources */,
 				047A71F21D3641B900E1F2BA /* MJRefreshGifHeader.m in Sources */,
 				047A71E91D3641B900E1F2BA /* MJRefreshComponent.m in Sources */,

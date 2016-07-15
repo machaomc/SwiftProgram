@@ -12,5 +12,6 @@
 #endif /* AGroupProgram_Bridging_Header_h */
 //引用要在swift中实用的OC类  eg:#import "test.h"
 #import "MJRefresh.h"
+#import "UIView+BFExtension.h"
 
 
