@@ -8,19 +8,18 @@
 
 import UIKit
 import SwiftyJSON
-class Model_TouTiao: NSObject,NewsModelInitProtocol {
+class Model_TouTiao: NewsChannelsHandle {
     
-    var title:NSString
-    var content:NSString
-    var imageUrl:NSString
+    
 
     required init(json: JSON) {
         
-        title = json["title"].stringValue
-        content = json["ptime"].stringValue
-        imageUrl = json["img"].stringValue
-        super.init()
-        
+       
+        super.init(json: json)
+    }
+    
+    required init(coder decoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     

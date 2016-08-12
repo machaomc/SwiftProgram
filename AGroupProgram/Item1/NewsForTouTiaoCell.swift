@@ -24,7 +24,7 @@ class NewsForTouTiaoCell: UITableViewCell {
         self.image_News.backgroundColor = UIColor.clearColor()
         self.addSubview(self.image_News)
         
-        self.label_Title.frame = CGRectMake(self.image_News.right+10, 10, APPScreenWidth - 15 - self.image_News.right - 10, 40)
+        self.label_Title.frame = CGRectMake(self.image_News.right+10, 5, APPScreenWidth - 15 - self.image_News.right - 10, 40)
         self.label_Title.numberOfLines = 0
         //self.label_Title.backgroundColor = UIColor.grayColor()
         self.label_Title.font = UIFont.systemFontOfSize(16.0)
@@ -41,8 +41,19 @@ class NewsForTouTiaoCell: UITableViewCell {
     
     func setDataWithModel(model:Model_TouTiao){
         self.label_Title.text = model.title as String
-        self.label_Content.text = model.content as String
-        self.image_News.sd_setImageWithURL(NSURL.init(string: model.imageUrl as String), placeholderImage: UIImage.init(named: "imageNews"))
+//        self.label_Title.frame = CGRectMake(self.image_News.right+10, 5, APPScreenWidth - 15 - self.image_News.right - 10, 100)
+//        self.label_Title.sizeToFit()
+//        self.label_Title.top = 5
+        
+        self.label_Content.text = model.digest! as String
+//        self.label_Content.sizeToFit()
+//        self.label_Content.top = self.label_Title.bottom+5
+//
+//        if self.label_Content.bottom > 75 {
+//            self.label_Content.height = 75 - self.label_Content.top
+//        }
+        
+        self.image_News.sd_setImageWithURL(NSURL.init(string: model.imgsrc as String), placeholderImage: UIImage.init(named: "imageNews"))
     }
     
     

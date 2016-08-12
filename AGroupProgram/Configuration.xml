@@ -1,0 +1,122 @@
+<!--APP应用系统配置-->
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+    <catalog name="system" description="系统配置">
+        <item name="isLinstenGateway" value="1" description="是否对BusConfig.xml的服务器进行启动检测" />
+        <item name="isHqPush" value="1" description="是否开启行情推送通道服务" />
+        <item name="pluginPath" value="SystemPlugin.xml|HQPlugin.xml|TradePlugin.xml|SSOPlugin.xml|OpenPlugin.xml" description="系统插件配置文件地址,多个用|分割" />
+        <item name="theme" value="theme1" description="默认主题名称" />
+        <item name="keyborad" value="0" description="原生键盘主题类型(0:浅色,1:深色)" />
+        <item name="isShowNetChange" value="1" description="是否显示网络连接提醒(0:否,1:是)" />
+        <item name="isDevelop" value="0" description="是否开发环境(0:否,1:是)" />
+        <item name="listenTouch" value="1" description="是否监听全局屏幕触发(0:否,1:是)" />
+        <item name="isCheckUpdate" value="1" description="是否启动检测版本更新(0:否,1:是)" />
+        <item name="htmlLoadMode" value="0" description="html的加载模式(0:从安全沙箱加载,1:从安装包加载)，默认是0" />
+        <item name="isBlurBackground" value="0" description="是否在切换到后台时候模糊背景(0:否,1:是)" />
+        <!--框架新增系统配置-->
+        <item name="isShowFMWKVersion" value="1" description="是否长按显示框架版本号(0:否,1:是)默认是1" />
+        <item name="isDebug" value="1" description="是否调试模式(0:否,1:是)默认是1" />
+        <item name="isRequestURLEncode" value="1" description="是否对请求入参进行URL编码(0:否,1:是)默认是1" />
+        <item name="isRequestURLSign" value="0" description="是否对请求入参进行签名(0:否,1:是)默认是0" />
+        <item name="requestSignKey" value="nPeaYkREFgwhlz6/UN582NYDd3ySKKTSM4jTiMrZtmYeT9CVhloh0e0kmq2PagBU" description="请求签名的Key" />
+        <item name="requestSignAppId" value="00000001" description="请求签名的APPId" />
+        <item name="isRequestURLEncrypt" value="0" description="是否对请求入参进行加密(0:否,1:是)默认是0" />
+        <item name="requestEncryptMode" value="des" description="加密的类型" />
+        <!--
+         <item name="requestEncryptKey" value="nPeaYkREFgwhlz6/UN582B5P0JWGWiHR7SSarY9qAFQ=" description="请求加密的Key" />
+         -->
+    </catalog>
+    
+    <catalog name="log" description="日志的配置">
+        <item name="logLevel" value="off" description="off|error|warn|info|debug|all" />
+        <item name="logAsync" value="1" description="是否异步写日志(0:同步，1:异步)" />
+        <item name="logType" value="console" description="console:控制台，file:文件，server:服务器，多种日志模式用|分割，如console|file|server" />
+        <item name="fileLogRollingFrequency" value="1440" description="文件日志滚动的时间间隔，单位分钟，超过就新建文件" />
+        <item name="fileLogRollingSize" value="1" description="文件日志滚动的文件大小间隔，单位M，超过就新建文件" />
+        <item name="fileLogMaxNum" value="7" description="文件日志的最大个数，超过就删除历史文件" />
+        <item name="fileLogMaxSize" value="20" description="文件日志的存储空间限制，单位M，超过就删除历史文件" />
+        <item name="serverLogSaveInterval" value="60" description="服务器日志的发送时间间隔，单位秒" />
+        <item name="serverLogSaveThreshold" value="100" description="服务器日志的发送累计条数间隔" />
+        <item name="serverLogSaveUrl" value="http://127.0.0.1/servlet/json" description="服务器日志的地址" />
+    </catalog>
+    
+    <catalog name="ssl" description="ssl证书配置">
+        <item name="zh.sczq.com.cn" value="1|app.sczq.com.cn.cer" description="格式为：是否校验证书(0:不校验,1:校验)|证书地址|证书密码" />
+        <item name="www.baidu.com" value="1|app.sczq.com.cn.cer" description="格式为：是否校验证书(0:不校验,1:校验)|证书地址|证书密码" />
+    </catalog>
+    
+
+    
+    <catalog name="noteBar" description="通知栏提示层配置">
+        <item name="barColor" value="0x009BE7" description="背景色" />
+        <item name="textColor" value="0xFFFFFF" description="字体颜色" />
+    </catalog>
+
+    
+    <catalog name="umeng" description="友盟统计配置">
+        <item name="isOpen" value="1" description="是否开启(0:否,1:是)" />
+        <item name="appKey" value="57171b05e0f55a39fb0024fe" description="授权Key" />
+        <item name="policy" value="0" description="发送策略(0:实时发送-只在测试模式下有效,1:启动发送,4:每日发送,5:仅在WIFI下时启动发送,6:最小间隔发送,7:进入后台时发送)" />
+        <item name="channelId" value="cert" description="发送渠道" />
+        <item name="isShowLog" value="1" description="设置是否打印sdk的log信息(0:否,1:是)" />
+        <item name="isEncrypt" value="0" description="设置是否对日志信息进行加密(0:否,1:是)" />
+    </catalog>
+    
+    <catalog name="update" description="版本管理配置">
+        <item name="isReboot" value="1" description="版本更新后是否关闭应用(0:否,1:是)" />
+        <item name="mode" value="0" description="更新模式0:全量更新,1:增量更新" />
+        <item name="version" value="0.0.11" description="版本名称" />
+        <item name="versionSn" value="61" description="版本内部序号" />
+        <item name="saveName" value="www.zip" description="下载H5压缩包名称" />
+        <item name="password" value="123" description="解压H5压缩包得密码" />
+        <item name="isEncrypt" value="0" description="H5下载压缩包是有密码(0:否,1:是)" />
+        <item name="checkUrl" value="http://119.254.98.132:8090/servlet/json?funcNo=901916&channel=2&soft_no=com.jzsec.jzbtest" description="版本自动检测的服务器地址" />
+    </catalog>
+
+    
+    <catalog name="theme" description="主题配置">
+        <item name="theme1" value="blueTheme.css|blueHq.css|hqRedGreen.css|blueTrade.css|TKIMBlueTheme.css" description="主题1样式文件地址" />
+        <item name="theme2" value="redTheme.css|redHq.css|hqRedGreen.css|redTrade.css" description="主题2样式文件地址" />
+        <item name="theme4" value="redTheme.css|redHq.css|hqGreenRed.css|redTrade.css" description="主题4样式文件地址" />
+        <item name="theme3" value="blueTheme.css|blueHq.css|hqGreenRed.css|blueTrade.css" description="主题3样式文件地址" />
+        <item name="theme5" value="pinkTheme.css|pinkHq.css|hqRedGreen.css" description="主题5样式文件地址" />
+    </catalog>
+    
+    <catalog name="CPAuth" description="银联认证相关配置">
+        <item name="environment" value="test" description="运行环境(生产环境:product,测试环境:test)" />
+        <item name="appSysId" value="90000" description="系统编号" />
+        <item name="privateKey" value="88888888" description="密钥" />
+    </catalog>
+
+    <catalog name="hq" description="服务器地址配置">
+        <item name="isMultipleUrl" value="1" description="是否有多线路,0：否 1：是" />
+        <item name="moudleTitles" value="szsh.沪深|plat.板块|newShare.新股|bond.债券|index.指数" description="行情模块标题配置" />
+        <item name="moudles" value="TKHqSzShViewController|TKHqPlatViewController|TKHqNewShareViewController|TKHqBondViewController|TKHqIndexViewController" description="行情模块类文件配置" />
+        <item name="handicap" value="1" description="独立盘口功能，1启用，0不启用" />
+        <item name="isNeedChooseSync" value="1" description="自选股同步功能，1启用，0不启用" />
+        <item name="isQuoteV3" value="1" description="是否是c的服务器，1是，0不是" />
+        <item name="isPostRequest" value="1" description="是否是Post请求，1是，0不是" />
+        <item name="banStockTypes" value="8,16" description="需要拦截的股票类型" />
+        <item name="isNeedWarning" value="0" description="是否需要预警，0为不要，1为要" />
+    </catalog>
+
+    <catalog name="trade" description="交易相关配置">
+        <item name="isMultipleUrl" value="1" description="是否有多线路,0：否 1：是" />
+        <item name="isActive" value="NO" description="是否需要激活,NO：否 YES：是" />
+        <item name="isSso" value="YES" description="是否需要统一登录,NO：否 YES：是" />
+        <item name="creditServerConfig" value="1" description="1.金证win" />
+        <item name="moudleTitles" value="buy.买入|sell.卖出|revoke.撤单|holding.持仓|query.查询" description="交易模块标题配置" />
+        <item name="moudles" value="TKTradeBuyViewController|TKTradeSellViewController|TKTradeRevokeViewController|TKTradeHoldingController|TKTradeQueryViewController" description="交易模块类文件配置" />
+    </catalog>
+    
+    <catalog name="sso" description="sso相关配置">
+        <item name="isActive" value="YES" description="是否需要激活,NO：否 YES：是" />
+    </catalog>
+    
+    <catalog name="webViewPool" description="webView链接池">
+        <item name="isUse" value="1" description="是否开启(0:否,1:是)" />
+        <item name="poolInitSize" value="6" description="池子初始大小" />
+        <item name="poolMaxSize" value="7" description="池子最多大小" />
+    </catalog>
+    
+</system>

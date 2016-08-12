@@ -13,6 +13,9 @@ class MCItem2ViewController: MCBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var test = MCSystemHelper.isInstallAppWithURLScheme("imaster", urlName: "com.jzsec.imaster")
+        print("getKeyFromConfig==\(test)")
+        
         // Do any additional setup after loading the view.
     }
 

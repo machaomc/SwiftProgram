@@ -9,10 +9,12 @@
 import UIKit
 
 class MCItem1ViewController: MCBaseTableViewController {
-
     
+    var tableHeaderView:UIView!
+    var model_Header:Model_TouTiao!
     var readNewsArray: [Model_TouTiao] = [] {
         didSet {
+            assert(tableView != nil)
             self.tableView!.reloadData()
         }
     }
@@ -23,11 +25,19 @@ class MCItem1ViewController: MCBaseTableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        self.setTableViewHeader()
+        self.tableView?.tableHeaderView = self.tableHeaderView
         //集成上拉与下拉刷新
         self.tableView!.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(MCItem1ViewController.requestInfo))
         //self.tableView!.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(MCItem1ViewController.requestMoreInfo))
         
         self.tableView!.mj_header.beginRefreshing()
+    }
+    
+    func setTableViewHeader(){
+        self.tableHeaderView = UIView.init(frame: CGRectMake(0, 0, APPScreenWidth, 180))
+        self.tableHeaderView.backgroundColor = UIColor.grayColor()
+        
     }
     
     /**
@@ -37,9 +47,11 @@ class MCItem1ViewController: MCBaseTableViewController {
         DataTool.loadReadNewsData { response -> Void in
             self.readNewsArray.removeAll()
             self.tableView!.mj_header.endRefreshing()
-            guard let modelArray = response else {
+            guard var modelArray = response else {
                 return
             }
+            self.model_Header = modelArray.first
+            modelArray.removeFirst()
             self.readNewsArray = modelArray +  self.readNewsArray
         }
     }
