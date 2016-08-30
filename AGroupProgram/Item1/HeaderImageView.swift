@@ -21,21 +21,29 @@ class HeaderImageView: UIView {
     var imageScrollView:UIScrollView!
     var model:Model_TouTiao!
     func showImageWithModel(){
-         self.imageScrollView.removeFromSuperview()
-         self.imageScrollView.frame = self.bounds
-
-//        for var index = 0; index < self.model.ads?.count; index+=1 {
-//            print("index is \(index)")
-//            var indexFlo:Float = Float(index) * (APPScreenWidth as Int)
-//            //var imageView:UIImageView = UIImageView.init(frame: CGRectMake(((index as Float)*APPScreenWidth) as Float, 0, APPScreenWidth, 100))
-//            
-//        }
         
-        for i in 0..<self.model.ads!.count {
-            print("index is \(i)")
-            //var imageView:UIImageView = UIImageView.init(frame: CGRectMake(i as Int, 0, APPScreenWidth, 100))
-            
+        
+        if let iahave = self.imageScrollView
+        {
+            self.imageScrollView.removeFromSuperview()
         }
+        
+        self.imageScrollView = UIScrollView.init(frame: self.bounds)
+        self.imageScrollView.contentSize = CGSizeMake(self.bounds.width*4, 180)
+        self.imageScrollView.pagingEnabled = true
+        self.addSubview(self.imageScrollView)
+        var count:CGFloat = 0;
+        for var index = 0; index < self.model.ads?.count; index+=1 {
+            print("index is \(index)")
+            //var indexFlo:Float = Float(index) * (APPScreenWidth as Int)
+            var imageView:UIImageView = UIImageView.init(frame: CGRectMake(count*self.bounds.width, 0, APPScreenWidth, 180))
+            
+            var ads:Ads = self.model.ads![index]
+            imageView.sd_setImageWithURL(NSURL.init(string: ads.imgsrc))
+            self.imageScrollView.addSubview(imageView)
+            count++
+        }
+        
     }
     
 

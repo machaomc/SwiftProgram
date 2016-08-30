@@ -439,6 +439,7 @@
 		047A71B91D363E3300E1F2BA /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				04D3D7141D6A9285009904BC /* nimbus */,
 				047A71BA1D3641B900E1F2BA /* MJRefresh */,
 			);
 			path = ThirdPart;
@@ -584,6 +585,13 @@
 				0488B6571D2E2AD500CF2797 /* MCItem4ViewController.swift */,
 			);
 			path = Item4;
+			sourceTree = "<group>";
+		};
+		04D3D7141D6A9285009904BC /* nimbus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = nimbus;
 			sourceTree = "<group>";
 		};
 		14A97454868E4D3310F9FEE2 /* Frameworks */ = {

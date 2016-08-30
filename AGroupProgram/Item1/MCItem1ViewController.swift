@@ -10,7 +10,7 @@ import UIKit
 
 class MCItem1ViewController: MCBaseTableViewController {
     
-    var tableHeaderView:UIView!
+    var tableHeaderView:HeaderImageView!
     var model_Header:Model_TouTiao!
     var readNewsArray: [Model_TouTiao] = [] {
         didSet {
@@ -35,7 +35,7 @@ class MCItem1ViewController: MCBaseTableViewController {
     }
     
     func setTableViewHeader(){
-        self.tableHeaderView = UIView.init(frame: CGRectMake(0, 0, APPScreenWidth, 180))
+        self.tableHeaderView = HeaderImageView.init(frame: CGRectMake(0, 0, APPScreenWidth, 180))
         self.tableHeaderView.backgroundColor = UIColor.grayColor()
         
     }
@@ -51,6 +51,10 @@ class MCItem1ViewController: MCBaseTableViewController {
                 return
             }
             self.model_Header = modelArray.first
+            
+            self.tableHeaderView.model = self.model_Header
+            self.tableHeaderView.showImageWithModel()
+            
             modelArray.removeFirst()
             self.readNewsArray = modelArray +  self.readNewsArray
         }
